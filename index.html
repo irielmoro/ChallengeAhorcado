@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Ahorcado</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <!-- CUSTOM CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- BACKGORUND-->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
+    <!-- /BACKGORUND-->
+    <img src="./img/logo.png" alt="logo" class="logo" >
+    <!--INICIO-->
+    <main class="invisible">  
+        <div class="wrapper">
+            <div class="typing-demo">
+                Juego del Ahorcado By: Iriel Moro
+            </div>
+        </div>
+    
+        
+        <div class="contenedor-botones">
+            <button id="btn-iniciar">Iniciar juego</button>
+            <button id="btn-agregar">Agregar palabra secreta</button>
+        </div>
+    </main>
+
+    <!--SECCION para AGREGAR PALABRA-->
+   <section id="seccion-agregar" class="invisible" >
+        <div id="contenido-agregar">
+            <p><img src="./img/icon-exclamation.png"  class="icon-exclamation">Máx. 8 caracteres <br>(sin caracteres especiales)</p>
+            <div id="cartel-guardado" class="invisible">
+                <div class="cartel-guardado">¡Guardado!</div>
+            </div>
+            <input name="texto" id="input-agregar" maxlength="8"></input>
+            <div class="btn-guardar-cancelar">
+                <button id="btn-guardar" disabled class="btn-disabled">Guardar palabra</button>
+                <button id="btn-cancelar">Cancelar</button>
+            </div>
+            <button class="btn-empezar">Empezar</button>
+        </div>
+   </section>
+   
+   <!--SECCION TABLERO-->
+   <section id="seccion-tablero" >
+
+        <div id="contenido-tablero">
+            <div id="tablero-horca">
+               
+                <img  id="horca-base" src="./img/tablero/horca-base.png" alt="">
+                <img class="invisible" id="horca-1" src="./img/tablero/horca-1.png" alt="">
+                <img class="invisible" id="horca-2" src="./img/tablero/horca-2.png" alt="">
+                <img class="invisible" id="horca-3" src="./img/tablero/horca-3.png" alt="">
+                <img class="invisible" id="horca-4" src="./img/tablero/horca-4.png" alt="">
+                <img class="invisible" id="horca-5" src="./img/tablero/horca-5.png" alt="">
+                <img class="invisible" id="horca-6" src="./img/tablero/horca-6.png" alt="">
+                <img class="invisible" id="horca-7" src="./img/tablero/horca-7.png" alt="">
+                <img class="invisible" id="horca-8" src="./img/tablero/horca-8.png" alt="">
+               
+                <img class="invisible" id="lost" src="./img/lost.png" alt="fail">
+                <img class="invisible" id="win" src="./img/win.png" alt="win">
+            </div>
+               
+            <div id="tablero-letras">
+                <img class="invisible" id="fail2" src="./img/tablero/fail.png" alt="">
+            </div>
+
+            <h3>LETRAS INCORRECTAS:</h3>
+            <div id="tablero-letras-incorrectas">
+                
+               <span id="letra-incorrecta">X</span>
+               <span id="letra-incorrecta">Y</span>
+            </div>
+
+            <div class="btn-tablero">
+                <button class="btn-nueva-palabra">¡Nueva Palabra!</button>
+                <button class="btn-rendirse">Rendirse e ir al Inicio</button>
+            </div>
+       
+        </div>
+   </section>
+
+<script src="./js/main.js"></script> 
+<script src="./js/tablero.js"></script>  
+<script src="./js/palabra-secreta.js"></script> 
+</body>
+</html>
