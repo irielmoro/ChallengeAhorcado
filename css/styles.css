@@ -182,7 +182,7 @@ button:hover{
     max-height: 100%;
 }
 
-#horca-base, #horca-1, #horca-2, #horca-3, #horca-4, #horca-5, #horca-6, #horca-7, #horca-8{
+.img-horca {
     height: 47vh;
     margin: 0px auto;
     width: 20vw 
@@ -246,7 +246,7 @@ button:hover{
     margin-top: 2%;
 }
 
-#letra{
+.letra{
     width: 10%;
     height: 100%;
     font-size: 360%;
@@ -286,7 +286,7 @@ button:hover{
     margin-top: 0.1%;
 }
 
-#letra-incorrecta{
+.letra-incorrecta{
     font-size: 240%;
     font-family: monospace;
     color:rgb(207, 40, 40);

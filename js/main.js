@@ -37,17 +37,23 @@ btnIniciar.addEventListener("click", function(){
 
 //EVENTO NUEVA PALABRA
 btnNueva.addEventListener("click", function(){
-    tableroLetras.innerHTML = "";
-    sortearPalabra(); 
+    adivinado = [];
+    errado = [];
+    anterior = estado;
+    estado = 0;
+    sortearPalabra();
     mostrarGuiones(palabra);
-    window.onkeydown = verificarLetra;    
+    mostrarLetrasIncorrectas();
+    actualizarImagen();
+
+    window.onkeypress = verificarLetra;
 })
 //EVENTO BOTON RENDIRSE
 btnRendirse.addEventListener("click", function(){
     tableroLetras.innerHTML = "";
     visible(vistaInicio);
     invisible(vistaTablero);
-    window.onkeydown = false;
+    window.onkeypress = undefined;
 })
 
 //EVENTO BOTON AGREGAR PALABRA
