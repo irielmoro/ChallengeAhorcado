@@ -20,24 +20,31 @@
 /****** STYLES MAIN ******/
 .wrapper{
     width: 100%;
-    height: 100%;
+    height: 70%;
     position: absolute;
-    top: 20%;
+    top: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+main h1{
+    color: rgba(43, 88, 77, 0.801);
+    position: absolute;
+    top: 0%;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
 .typing-demo{
     position: absolute;
     top: 7%;
     color: rgba(43, 88, 77, 0.801);
-    width: 33ch;
-    animation: typing 4s steps(50),
+    width: 18ch;
+    height: 7.2%;
+    animation: typing 2s steps(50),
     blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
+    border-right: 2px solid;
     font-family: monospace;
     font-size: 2.5em;
 }
@@ -77,6 +84,7 @@ button{
     color: rgba(43, 88, 77, 0.801);
     border: none;
     transition: 0.4s all;
+    outline: none;
 }
 
 button:hover{
@@ -182,58 +190,12 @@ button:hover{
     max-height: 100%;
 }
 
-#horca-base, #horca-1, #horca-2, #horca-3, #horca-4, #horca-5, #horca-6, #horca-7, #horca-8{
+.img-horca{
     height: 47vh;
     margin: 0px auto;
     width: 20vw 
 }
 
-
-@media (max-width: 980px){
-    #cabeza{
-        bottom: 118%;
-        left: 71%;
-    }
-
-    #cuerpo{
-        position: relative;
-        bottom: 80%;
-        left: 54%;
-        height: 40%;
-        width: 5%;
-    }
-    #brazo-izquierdo{
-        position: relative;
-        bottom: 104%;
-        left: 18%;
-        height: 16%;
-        width: 14%;
-    }
-    
-    #brazo-derecho{
-        position: relative;
-        bottom: 104%;
-        left: 50%;
-        height: 16%;
-        width: 14%;
-    }
-    
-    #pierna-izquierda{
-        position: relative;
-        bottom: 83%;
-        left: 67%;
-        height: 16%;
-        width: 16%;
-    }
-    
-    #pierna-derecha{
-        position: relative;
-        bottom: 67%;
-        left: 16%;
-        height: 16%;
-        width: 16%;
-    }
-}
 
 
 /*TABLERO LETRAS*/
@@ -246,7 +208,7 @@ button:hover{
     margin-top: 2%;
 }
 
-#letra{
+.letra{
     width: 10%;
     height: 100%;
     font-size: 360%;
@@ -272,12 +234,6 @@ button:hover{
     width: 70%;
 }
 
-#fail2{
-    position: absolute;
-    bottom: 45.6%;
-    left: 48.8%;
-    width: 2.3%;
-}
 
 #tablero-letras-incorrectas{
    text-align: center;
@@ -286,7 +242,7 @@ button:hover{
     margin-top: 0.1%;
 }
 
-#letra-incorrecta{
+.letra-incorrecta{
     font-size: 240%;
     font-family: monospace;
     color:rgb(207, 40, 40);
@@ -308,4 +264,40 @@ button:hover{
 
 .btn-nueva-palabra, .btn-rendirse{
     height: 60%;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 880px){
+    button{
+        width: 80vw;
+    }
+    .btn-tablero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 34%;
+    }
+    .img-horca {
+        height: 40vh;
+        margin: 0px auto;
+        width: 70vw;
+    }
+    #tablero-letras{
+        width: 70vw;
+        margin-bottom: 4%;
+    }
+    .logo {
+        width: 13%;
+    }
+    #input-agregar {
+        width: 65%;
+        font-size: 2em;
+    }
+    .btn-guardar-cancelar {     
+        width: 96vw;
+    }
+
+
+
 }

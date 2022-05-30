@@ -30,24 +30,35 @@ function invisible(vista){
 btnIniciar.addEventListener("click", function(){
     invisible(vistaInicio);
     visible(vistaTablero);
+    adivinado = [];
+    errado = [];
+    anterior = estado;
+    estado = 0;
     sortearPalabra(); 
     mostrarGuiones(palabra);
-    window.onkeydown = verificarLetra;  
+    mostrarLetrasIncorrectas();
+    actualizarImagen();
+    window.onkeypress = verificarLetra; 
 })
 
 //EVENTO NUEVA PALABRA
 btnNueva.addEventListener("click", function(){
-    tableroLetras.innerHTML = "";
+    adivinado = [];
+    errado = [];
+    anterior = estado;
+    estado = 0;
     sortearPalabra(); 
     mostrarGuiones(palabra);
-    window.onkeydown = verificarLetra;    
+    mostrarLetrasIncorrectas();
+    actualizarImagen();
+    window.onkeypress = verificarLetra;    
 })
 //EVENTO BOTON RENDIRSE
 btnRendirse.addEventListener("click", function(){
     tableroLetras.innerHTML = "";
     visible(vistaInicio);
     invisible(vistaTablero);
-    window.onkeydown = false;
+    window.onkeypress = undefined;
 })
 
 //EVENTO BOTON AGREGAR PALABRA
@@ -76,8 +87,7 @@ btnGuardar.addEventListener("click", function(){
     }, 800);
     inputAgregar.value = "";
     inputAgregar.focus();
-    
-    console.log(palabrasSecretas)
+
 })
 
 //EVENTO BOTON CANCELAR
@@ -91,8 +101,14 @@ btnCancelar.addEventListener("click", function(){
 btnEmpezar.addEventListener("click", function(){
     visible(vistaTablero);
     invisible(vistaAgregar);
+    adivinado = [];
+    errado = [];
+    anterior = estado;
+    estado = 0;
     sortearPalabra(); 
     mostrarGuiones(palabra);
-    window.onkeydown = verificarLetra;  
+    mostrarLetrasIncorrectas();
+    actualizarImagen();
+    window.onkeypress = verificarLetra; 
 })
 

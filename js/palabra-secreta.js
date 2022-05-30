@@ -1,4 +1,4 @@
-var palabrasSecretas = ["PAPAS", "CHOCOLAT"/* ,"FIDEOS","HISTORIA","GALLINA" */];
+var palabrasSecretas = ["PAPAS","FIDEOS","HISTORIA","GALLINA"];
 var palabra = "";
 var palabrasSorteadas = [];
 
@@ -11,7 +11,6 @@ function sortear(){
     var elementos = (palabrasSecretas.length - 1);
     var posicion = Math.round(Math.random()*elementos);
     palabra = palabrasSecretas[posicion];
-    console.log(palabra);
 }
 function sortearPalabra(){
       
@@ -26,12 +25,9 @@ function sortearPalabra(){
     }
     if(repetida == false){
         palabrasSorteadas.push(palabra);
-        console.log("*NO SE HA REPETIDO y se agrega:")
-        console.log("*LISTA PALABRAS SORTEADAS: "+palabrasSorteadas);
     }
       
     if (repetida == true) {
-        console.log("*PALABRA REPETIDA,se sortea de nuevo:")
         sortear();
     }
     
