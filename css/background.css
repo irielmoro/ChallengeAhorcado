@@ -1,14 +1,11 @@
 
-
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
 *{
     margin: 0px;
     padding: 0px;
 }
 
 .area{
-    background: rgba(117, 96, 212, 0.801);  
+    background: rgba(255, 228, 73, 0.801);  
     background: -webkit-linear-gradient(to left, #a1a4ee, #767aca);  
     width: 100%;
     height:100vh; 
